@@ -15,8 +15,8 @@
             totalPriceStatus: 'FINAL',
             totalPriceLabel: 'Total',
             totalPrice: amount,
-            currencyCode: 'USD',
-            countryCode: 'US',
+            currencyCode: 'EUR',
+            countryCode: 'PT',
           },
           callbackIntents: ['PAYMENT_AUTHORIZATION'],
         }"
@@ -45,20 +45,20 @@ export default {
         {
           type: "CARD",
           parameters: {
-            allowedAuthMethods: ["PAN_ONLY", "CRYPTOGRAM_3DS"],
+            allowedAuthMethods: ["CRYPTOGRAM_3DS"],
             allowedCardNetworks: ["MASTERCARD", "VISA"],
           },
           tokenizationSpecification: {
             type: "PAYMENT_GATEWAY",
             parameters: {
-              gateway: "example",
-              gatewayMerchantId: "exampleGatewayMerchantId",
+              gateway: "cybersource",
+              gatewayMerchantId: "reduniq_teste",
             },
           },
         },
       ],
       merchantInfo: {
-        merchantId: "12345678901234567890",
+        merchantId: "BCR2DN4TUS3OHPKI",
         merchantName: "Demo Merchant",
       },
     },
